@@ -6,7 +6,6 @@ export default class BlinkText extends Component {
         super(props);
         this.state = { isShowingText: true };
 
-
         //toggle the state every second
         setInterval(() => {
             this.setState(previousState => {
@@ -14,6 +13,7 @@ export default class BlinkText extends Component {
             });
         }, 1000);
     }
+
     render() {
         const display = this.state.isShowingText ? this.props.text : ' ';
         return (

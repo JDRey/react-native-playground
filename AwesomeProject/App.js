@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, Button, Image } from 'react-native';
 
-import Greeting from './components/greeting.js';
+import Greeting from './components/greeting';
 import BlinkText from './components/blinkText';
+import BeautifulText from './components/beautifulText';
+
 export default class App extends Component {
   render() {
     const bananaPicUrl = {
@@ -24,10 +26,12 @@ export default class App extends Component {
         <Greeting name='Pleb' />
         <Greeting name='Plake' />
         <Text style={styles.text}>Next are some timed state changes:</Text>
-        <BlinkText text='I love to blink!'/>
-        <BlinkText text='I love to blink, too!'/>
-        <BlinkText text='Dont leave me out of this!!'/>
-        <BlinkText text='Hey, what about me?'/>
+        <BlinkText text='I love to blink!' />
+        <BlinkText text='I love to blink, too!' />
+        <BlinkText text='Dont leave me out of this!!' />
+        <BlinkText text='Hey, what about me?' />
+        <Text style={styles.text}>...and some styled text!</Text>
+        <BeautifulText newStyle={styles}/>
       </View>
     );
   }
