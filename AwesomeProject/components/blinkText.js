@@ -4,7 +4,7 @@ import {View,  Text } from 'react-native';
 export default class BlinkText extends Component {
     constructor(props) {
         super(props);
-        this.state = { isShowingText: false };
+        this.state = { isShowingText: true };
 
 
         //toggle the state every second
