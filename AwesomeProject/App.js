@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View, Button, Image } from 'react-native';
 
 import Greeting from './components/greeting.js';
-
+import BlinkText from './components/blinkText';
 export default class App extends Component {
   render() {
     const bananaPicUrl = {
@@ -23,6 +23,11 @@ export default class App extends Component {
         <Greeting name='Plob' />
         <Greeting name='Pleb' />
         <Greeting name='Plake' />
+        <Text style={styles.text}>Next are some timed state changes:</Text>
+        <BlinkText text='I love to blink!'/>
+        <BlinkText text='I love to blink, too!'/>
+        <BlinkText text='Dont leave me out of this!!'/>
+        <BlinkText text='Hey, what about me?'/>
       </View>
     );
   }

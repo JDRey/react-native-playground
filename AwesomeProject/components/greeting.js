@@ -4,7 +4,7 @@ import { Text, View } from 'react-native';
 export default class Greeting extends Component {
     render() {
         return (
-            <View style={{ alignItems: 'center' }}>
+            <View>
                 <Text>Hello, my name is {this.props.name}!</Text>
             </View>
         );
