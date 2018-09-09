@@ -4,6 +4,7 @@ import { StyleSheet, Text, View, Button, Image } from 'react-native';
 import Greeting from './components/greeting';
 import BlinkText from './components/blinkText';
 import BeautifulText from './components/beautifulText';
+import FlexboxExamples from './components/flexboxExamples';
 
 export default class App extends Component {
   render() {
@@ -31,7 +32,9 @@ export default class App extends Component {
         <BlinkText text='Dont leave me out of this!!' />
         <BlinkText text='Hey, what about me?' />
         <Text style={styles.text}>...and some styled text!</Text>
-        <BeautifulText newStyle={styles}/>
+        <BeautifulText newStyle={styles} />
+        <Text style={styles.text}>Below is a few examples of using layout using flexbox</Text>
+        <FlexboxExamples newStyle={styles} />
       </View>
     );
   }
@@ -43,6 +46,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#febebc',
     alignItems: 'center',
     justifyContent: 'center',
+    paddingTop: 100,
   },
   text: {
     color: '#19405e',
