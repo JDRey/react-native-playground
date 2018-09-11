@@ -5,6 +5,7 @@ import Greeting from './components/greeting';
 import BlinkText from './components/blinkText';
 import BeautifulText from './components/beautifulText';
 import FlexboxExamples from './components/flexboxExamples';
+import PizzaTranslator from './components/pizzaTranslator';
 
 export default class App extends Component {
   render() {
@@ -13,7 +14,7 @@ export default class App extends Component {
     };
     return (
       <View style={styles.container}>
-        <Button
+        {/* <Button
           title='Test Button'
           color='#3279ad'
           accessibilityLabel='Learn more about this blue button'
@@ -32,9 +33,11 @@ export default class App extends Component {
         <BlinkText text='Dont leave me out of this!!' />
         <BlinkText text='Hey, what about me?' />
         <Text style={styles.text}>...and some styled text!</Text>
-        <BeautifulText newStyle={styles} />
-        <Text style={styles.text}>Below is a few examples of using layout using flexbox</Text>
-        <FlexboxExamples newStyle={styles} />
+        <BeautifulText newStyle={styles} /> */}
+        {/* <Text style={styles.h2}>Below are a few examples of using layout using flexbox</Text>
+        <FlexboxExamples newStyle={styles} /> */}
+        <Text style={[styles.text, {fontWeight: 'bold'}]}>Translate Text to Pizza!</Text>
+        <PizzaTranslator newStyle={styles.inputField}/>
       </View>
     );
   }
@@ -58,5 +61,11 @@ const styles = StyleSheet.create({
   image: {
     width: 200,
     height: 120,
-  }
+  },
+  inputField: {
+    height: 40,
+    borderColor: 'black',
+    borderWidth: 2,
+    padding: 5,
+  },
 });
