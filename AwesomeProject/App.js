@@ -6,6 +6,7 @@ import BlinkText from './components/blinkText';
 import BeautifulText from './components/beautifulText';
 import FlexboxExamples from './components/flexboxExamples';
 import PizzaTranslator from './components/pizzaTranslator';
+import AlertButtons from './components/alertButtons';
 
 export default class App extends Component {
   render() {
@@ -36,8 +37,10 @@ export default class App extends Component {
         <BeautifulText newStyle={styles} /> */}
         {/* <Text style={styles.h2}>Below are a few examples of using layout using flexbox</Text>
         <FlexboxExamples newStyle={styles} /> */}
-        <Text style={[styles.text, {fontWeight: 'bold'}]}>Translate Text to Pizza!</Text>
-        <PizzaTranslator newStyle={styles.inputField}/>
+        {/* TODO: refactor <Text/> components into their respective component files to later use rn-router to go to diff pages */}
+        {/* <Text style={[styles.text, { fontWeight: 'bold' }]}>Translate Text to Pizza!</Text>
+        <PizzaTranslator newStyle={styles.inputField} /> */}
+        <AlertButtons newStyle={styles.text}/>
       </View>
     );
   }
@@ -49,7 +52,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#febebc',
     alignItems: 'center',
     justifyContent: 'center',
-    paddingTop: 100,
+    // paddingTop: 100,
   },
   text: {
     color: '#19405e',
