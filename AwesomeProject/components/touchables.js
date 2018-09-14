@@ -15,8 +15,9 @@ export default class Touchables extends Component {
     render() {
         return (
             <View style={[styles.container, { alignSelf: 'stretch' }]}>
+                <Text style={[this.props.newStyle, { alignSelf: 'center', fontWeight: 'bold' }]}>Test these Touchables out!</Text>
                 {/* TODO: the underlay color is extending past buttonBottom, maybe the marginBottom affecting it and parent View >.< */}
-                <TouchableHighlight onPress={this._onPressButton} underlayColor='white'>
+                <TouchableHighlight onPress={this._onPressButton} underlayColor='#febebc'>
                     <View style={styles.button}>
                         <Text style={styles.buttonText}>TouchableHighlight</Text>
                     </View>
@@ -42,9 +43,9 @@ export default class Touchables extends Component {
                 <TouchableHighlight
                     onPress={this._onPressButton}
                     onLongPress={this._onLongPressButton}
-                    underlayColor='white'>
+                    underlayColor='#febebc'>
                     <View style={styles.button}>
-                        <Text style={styles.buttonText}>TouchableHighlight</Text>
+                        <Text style={styles.buttonText}>TouchableHighlight tap and long</Text>
                     </View>
                 </TouchableHighlight>
             </View>
@@ -57,7 +58,7 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     button: {
-        marginBottom: 30,
+        margin: 20,
         width: 260,
         alignItems: 'center',
         backgroundColor: '#2196F3'
