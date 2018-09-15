@@ -10,6 +10,7 @@ import AlertButtons from './components/alertButtons';
 import Touchables from './components/touchables';
 import FlatListBasics from './components/flatList';
 import SectionListBasics from './components/sectionList';
+import FetchExample from './components/fetchExample';
 
 export default class App extends Component {
   render() {
@@ -19,7 +20,7 @@ export default class App extends Component {
     return (
       <ScrollView>
         <View style={styles.container}>
-          <Text style={styles.h2}>Hello, World!</Text>
+          {/* <Text style={styles.h2}>Hello, World!</Text>
           <Text style={styles.text}>To start things off, here is a picture of some bananas:</Text>
           <Image source={bananaPicUrl} style={styles.image} />
           <Text style={styles.text}>... and here are some people who love them:</Text>
@@ -35,14 +36,15 @@ export default class App extends Component {
           <Text style={styles.text}>...and some styled text!</Text>
           <BeautifulText newStyle={styles} />
           <Text style={styles.h2}>Below are a few examples of using layout using flexbox</Text>
-          <FlexboxExamples newStyle={styles} />
+          <FlexboxExamples newStyle={styles} /> */}
           {/* TODO: refactor <Text/> components into their respective component files to later use react-native-router to go to diff pages */}
-          <Text style={[styles.text, { fontWeight: 'bold' }]}>Translate Text to Pizza!</Text>
+          {/* <Text style={[styles.text, { fontWeight: 'bold' }]}>Translate Text to Pizza!</Text>
           <PizzaTranslator newStyle={styles.inputField} />
           <AlertButtons newStyle={styles.text} />
           <Touchables newStyle={styles.text} />
           <FlatListBasics newStyle={styles.text} />
-          <SectionListBasics newStyle={styles.text} />
+          <SectionListBasics newStyle={styles.text} /> */}
+          <FetchExample />
         </View>
       </ScrollView>
     );
